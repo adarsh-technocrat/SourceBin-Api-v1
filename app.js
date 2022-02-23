@@ -12,6 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 const postBin = require("./routes/sourceBin");
 
 // using  [Routes]
-app.use("/api/v1", postBin);
+app.use(postBin);
 
 module.exports = app;
