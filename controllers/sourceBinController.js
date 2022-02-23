@@ -1,5 +1,19 @@
 const axios = require("axios");
 
+exports.initialRoute = async (req, res) => {
+  try {
+    return res.status(200).json({
+      success: true,
+      message: "Welcome to Source Bin Api 😊",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: true,
+      message: "Opps!! Server Error 😔",
+    });
+  }
+};
+
 exports.createPostBin = async (req, res) => {
   try {
     const content = req.body.content;
